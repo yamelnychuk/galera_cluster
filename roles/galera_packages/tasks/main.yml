@@ -1,0 +1,11 @@
+---
+- name: Install MariaDB server packages
+  yum: name={{ items }} state=present
+  vars:
+        items:
+                - MariaDB-client
+                - MariaDB-server
+                - rsync
+
+- name: Install MySQL-python
+  yum: name=MySQL-python state=present

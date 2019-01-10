@@ -1,0 +1,5 @@
+mysql -u galera -p -e 'CREATE DATABASE clustertest;'
+
+mysql -u galera -p -e 'CREATE TABLE clustertest.mycluster ( id INT NOT NULL AUTO_INCREMENT, name VARCHAR(50), ipaddress VARCHAR(20), PRIMARY KEY(id));'
+
+mysql -u galera -p -e 'INSERT INTO clustertest.mycluster (name, ipaddress) VALUES ("db1", "1.1.1.1");'

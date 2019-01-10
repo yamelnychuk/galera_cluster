@@ -1,0 +1,9 @@
+---
+- hosts: galera_cluster
+  roles:
+    - security
+    - galera_repos
+    - galera_packages
+    - galera_privs
+    - galera_conf
+    - galera_bootstrap
